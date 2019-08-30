@@ -1,11 +1,24 @@
 #include <stdint.h>
+#include <autogen/lib.h>
+#include <boost/array.hpp>
+#include <boost/asio.hpp>
+
+using namespace autogen;
+using boost::asio::ip::udp;
 
 class BenLib {
 private:
-    uint32_t myvalue;
+    uint32_t myValue;
 public:
-    double dick;
-    uint32_t setValue(uint32_t);
+    void setValue(uint32_t);
+    uint32_t getValue();
+    void incValue();
+
 };
 
-uint32_t globalSet(uint32_t);
+class comm {
+private:
+public:
+    comm();
+    uint32_t sendPacket(const packet::traj3dof*);
+};

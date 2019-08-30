@@ -1,14 +1,19 @@
-all: main
+INCLUDE += -I../../../mikipilot/
 
-main: libbenlib.a
-	gcc -O0 main.cpp -L. -lbenlib -lstdc++ -o main
+LIBS += -L../../mikipilot/build/gcs/executable/release -l
+LIBS = -L../../../mikipilot -l
+# INCLUDE += -lboost
 
-BenLib.o:
-	gcc -O0 -c BenLib.cpp
+default: main
+
+main: libbenlib.a main.cpp 
+	gcc -O0 $(INCLUDE) main.cpp -L. -lbenlib -lstdc++ -o main
+
+BenLib.o: BenLib.cpp BenLib.h
+	gcc -O0 $(INCLUDE) -c BenLib.cpp
 
 libbenlib.a: BenLib.o
 	ar rcs libbenlib.a BenLib.o
 
 clean: 
 	rm -f BenLib.o libbenlib.a main
-

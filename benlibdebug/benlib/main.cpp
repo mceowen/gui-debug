@@ -4,8 +4,8 @@
 int main(void) {
     BenLib bl;
     
-
-    std::cout << "Hello" << bl.setValue(1); 
+    bl.setValue(1); 
+    std::cout << "Hello" << bl.getValue();
 
     return 0;
 }

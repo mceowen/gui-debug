@@ -10,6 +10,11 @@ int main(int argc, char *argv[])
 
     qDebug() << "Did it!" << bl.dick << endl;
     qDebug() << "Did it not!" <<  bl.setValue((uint32_t)1000) << endl;
+    qDebug() << "Did it not!" <<  bl.setValue((uint32_t)1000) << endl;
+    qDebug() << "Did it not!" <<  bl.setValue((uint32_t)1000) << endl;
+    qDebug() << "Did it not!" <<  bl.setValue((uint32_t)1000) << endl;
+    qDebug() << "Did it not!" <<  bl.setValue((uint32_t)1000) << endl;
+    qDebug() << "Did it not!" <<  bl.setValue((uint32_t)1000) << endl;
     qDebug() << "Will it?" << globalSet(88) << endl;
 
     return a.exec();

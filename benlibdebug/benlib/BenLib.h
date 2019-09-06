@@ -1,10 +1,10 @@
 #include <stdint.h>
 #include <autogen/lib.h>
-#include <boost/array.hpp>
-#include <boost/asio.hpp>
+// #include <boost/array.hpp>
+// #include <boost/asio.hpp>
 
-using namespace autogen;
-using boost::asio::ip::udp;
+// using namespace autogen;
+// using boost::asio::ip::udp;
 
 class BenLib {
 private:
@@ -20,5 +20,5 @@ class comm {
 private:
 public:
     comm();
-    uint32_t sendPacket(const packet::traj3dof*);
+    // uint32_t sendPacket(const packet::traj3dof*);
 };
